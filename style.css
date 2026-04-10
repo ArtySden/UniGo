@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111;
+}
+
+/* ---------- ESTRUCTURA GENERAL ---------- */
+.login-page,
+.panel-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ---------- LOGIN ---------- */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-content {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.logo-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+    background-color: #f1e8f8;
+    color: #9b63d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.login-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.input-email {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #9f80b9;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 14px;
+    background-color: #c8bdd9;
+    color: #5e556a;
+    border: 1px solid #8a7b9b;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 25px;
+    color: black;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #b8b8b8;
+    margin: 0 12px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #a47cc4;
+    border-radius: 30px;
+    background-color: white;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #222;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
+
+/* ---------- PANEL ---------- */
+.panel-header {
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    color: #c18bdb;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.brand-subtitle {
+    color: #6f6f6f;
+    font-size: 1rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 14px 0;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.menu-item.active {
+    color: #c18bdb;
+}
+
+.tasks-box {
+    max-width: 820px;
+    margin: 0 auto;
+    background-color: #e5d5e8;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.task-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 16px 14px;
+    display: grid;
+    grid-template-columns: 35px 1fr auto;
+    align-items: center;
+    gap: 14px;
+}
+
+.task-icon {
+    font-size: 1.8rem;
+}
+
+.task-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.task-info p {
+    font-size: 0.92rem;
+    color: #777;
+}
+
+.task-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.summary-box {
+    max-width: 820px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.summary {
+    text-align: center;
+    padding: 18px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.pending {
+    background-color: #d58d8d;
+}
+
+.completed {
+    background-color: #b9d9ab;
+}
+
+.bottom-line {
+    width: 120px;
+    height: 5px;
+    background-color: #111;
+    border-radius: 10px;
+    margin: 18px auto 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+    .login-page,
+    .panel-page {
+        padding: 14px;
+    }
+
+    .login-content {
+        margin: 25px auto;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.92rem;
+    }
+
+    .menu {
+        gap: 12px;
+        justify-content: space-around;
+    }
+
+    .menu-item {
+        font-size: 0.82rem;
+    }
+
+    .tasks-box {
+        padding: 14px;
+    }
+
+    .task-card {
+        grid-template-columns: 28px 1fr auto;
+        gap: 10px;
+        padding: 14px 10px;
+    }
+
+    .task-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .task-info p {
+        font-size: 0.84rem;
+    }
+
+    .task-btn {
+        padding: 9px 10px;
+        font-size: 0.88rem;
+    }
+
+    .summary {
+        font-size: 1.05rem;
+        padding: 15px;
+    }
+
+    .bottom-line {
+        width: 95px;
+    }
+}
